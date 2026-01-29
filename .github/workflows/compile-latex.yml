@@ -1,0 +1,46 @@
+name: Compile LaTeX to PDF
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'latex/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'latex/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: texlive/texlive:latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        run: |
+          cd latex
+          pdflatex -interaction=nonstopmode payment_dictionary.tex
+          biber payment_dictionary
+          makeindex payment_dictionary.idx
+          pdflatex -interaction=nonstopmode payment_dictionary.tex
+          pdflatex -interaction=nonstopmode payment_dictionary.tex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: payment-dictionary-pdf
+          path: latex/payment_dictionary.pdf
+          retention-days: 90
+
+      - name: Create release on tag
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v1
+        with:
+          files: latex/payment_dictionary.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

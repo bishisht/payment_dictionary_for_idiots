@@ -1,0 +1,33 @@
+% dictionary_style.sty - Custom Commands for Dictionary Entries
+\ProvidesPackage{dictionary_style}
+
+% Main entry command
+% #1 = term name
+% #2 = pronunciation and part of speech
+% #3 = definition text
+\newcommand{\dictentry}[3]{%
+  \noindent\textbf{#1} \textit{#2}\\
+  #3\par\vspace{0.5em}
+}
+
+% Sub-definition for multiple meanings
+% #1 = definition number
+\newcommand{\subdef}[1]{\par\textbf{#1.} }
+
+% Example usage
+% #1 = example text
+\newcommand{\example}[1]{\par\textit{Example:} \textit{#1}}
+
+% Cross reference to related terms
+% #1 = comma-separated list of related terms
+\newcommand{\crossref}[1]{\par\textit{See also:} #1}
+
+% Etymology or historical context
+% #1 = etymology text
+\newcommand{\etymology}[1]{\par\textit{Etymology:} #1}
+
+% Add term to index
+% #1 = term to index
+\newcommand{\indexentry}[1]{\index{#1}}
+
+\endinput
