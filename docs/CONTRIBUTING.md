@@ -51,6 +51,7 @@
 - **Keep it concise**: Aim for 2-4 sentences for the main definition
 - **Use active voice**: "ACH processes transactions" not "Transactions are processed by ACH"
 - **Link to related concepts**: Help readers explore connected topics
+- **Add cross-domain analogies**: Use biological, medical, or everyday concepts to make abstract ideas intuitive (highly encouraged!)
 
 ### Don'ts
 
@@ -58,6 +59,41 @@
 - **Don't assume knowledge**: Explain acronyms fully on first use
 - **Don't use jargon**: If you must use technical terms, define them too
 - **Don't be vague**: Be specific about what something does and why it matters
+
+## Cross-Domain Analogies (Philosophy)
+
+Payment systems are **real-time, irreversible, high-risk systems** where error handling matters more than raw performance. This makes them remarkably similar to **biological systems**.
+
+### Why Biological Analogies Work
+
+Both payment systems and biological systems share key characteristics:
+- **High-throughput**: Process thousands of events per second
+- **Fault-sensitive**: Single errors can cascade into major failures
+- **Real-time**: Decisions must be made in milliseconds
+- **Irreversible**: Actions cannot be easily undone
+- **Require checkpoints**: Multi-stage validation prevents catastrophic failures
+
+### Effective Analogy Mappings
+
+**Biological/Medical → Payment System:**
+- Immune checkpoints → Authorization gates
+- Neural routing → Payment switches
+- Oxidative stress → System overload
+- Error correction (DNA repair) → Transaction reconciliation
+- Checkpoint failure → Fraud
+- Redundant organs → Failover systems
+- Cell impersonation (cancer) → Card cloning
+- Immune response → Fraud detection
+- Local tissue decisions → Offline authorization
+- Central nervous system → Issuer approval
+
+### Writing Good Analogies
+
+A good analogy should:
+1. **Explain WHY, not just WHAT**: Help readers understand the purpose of mechanisms
+2. **Be accessible**: Use concepts familiar to non-technical readers
+3. **Highlight parallels**: Show structural similarities between domains
+4. **Build intuition**: Make abstract concepts concrete and memorable
 
 ### Example of a Good Definition
 
