@@ -1,0 +1,39 @@
+% preamble.tex - Package Configuration and Setup
+
+% Font encoding and input
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% Page geometry - sensible margins
+\usepackage[margin=2.5cm]{geometry}
+
+% Index generation
+\usepackage{imakeidx}
+\makeindex
+
+% Bibliography management
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+\addbibresource{backmatter/references.bib}
+
+% Hyperlinks (load near end to avoid conflicts)
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    bookmarksnumbered=true,
+    pdfstartview=FitH
+}
+
+% Better definition lists
+\usepackage{enumitem}
+
+% Special symbols
+\usepackage{textcomp}
+
+% Better typography
+\usepackage{microtype}
+
+% Custom dictionary styling
+\usepackage{styles/dictionary_style}
