@@ -2,5 +2,32 @@
 \chapter*{D}
 \addcontentsline{toc}{chapter}{D}
 
-% Terms will be added here
+\dictentry{DUKPT}{/ˈdʌk-pɪt/, \textit{abbr.}}{
+Derived Unique Key Per Transaction. A cryptographic key management scheme used
+in electronic payments to ensure that a unique, one-time encryption key is
+generated for every single transaction. DUKPT prevents "master key"
+compromise; even if an attacker steals the key for a specific transaction, they
+cannot use it to decrypt any past or future transactions from the same device.
 
+\example{When you enter your PIN at a checkout terminal, the device uses DUKPT to
+encrypt the PIN with a key that will never be used again. Even if a hacker
+intercepted that specific message, they couldn't use that information to steal
+PINs from future customers.}
+
+\analogy{Biological}{Like an \textbf{Enzyme Blueprint}. Imagine a master DNA
+code (the Base Derivation Key) kept safe in a cell's nucleus. Each individual
+cell (POS terminal) is given a unique genetic seed derived from that DNA. To
+perform a task (a transaction), the cell produces a specific, one-time enzyme
+(the session key). Once the task is done, the enzyme is immediately broken down
+and disappears. Knowing the structure of one used enzyme doesn't allow you to
+predict the next one, nor can you use it to reconstruct the master DNA.}
+
+\crossref{\textbf{Encryption}, \textbf{HSM}, \textbf{Key Management}, \textbf{PIN}}
+
+\etymology{Developed in the late 1980s and formalized in the ANSI X9.24
+standard. It became the industry standard for protecting PINs at the point of
+sale.}
+}
+\indexentry{DUKPT}
+
+% Additional D terms will be added here

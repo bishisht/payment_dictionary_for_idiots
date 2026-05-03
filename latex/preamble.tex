@@ -1,11 +1,25 @@
 % preamble.tex - Package Configuration and Setup
 
-% Font encoding and input
+% Engine-aware font setup
+\usepackage{iftex}
+\ifPDFTeX
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{courier}
+\else
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Times New Roman}
+\setmonofont{Courier New}
+\fi
 
 % Page geometry - sensible margins
 \usepackage[margin=2.5cm]{geometry}
+
+% Dictionary-style two-column tuning
+\setlength{\columnsep}{18pt}
+\setlength{\columnseprule}{0pt}
 
 % Index generation
 \usepackage{imakeidx}
@@ -18,6 +32,9 @@
 % Hyperlinks (load near end to avoid conflicts)
 \usepackage{hyperref}
 \hypersetup{
+    pdftitle={Payment Dictionary for Idiots},
+    pdfauthor={Bishisht Bhatta},
+    pdfsubject={A Learning Resource for Payment Industry Terminology},
     colorlinks=true,
     linkcolor=blue,
     citecolor=blue,
@@ -28,6 +45,7 @@
 
 % Better definition lists
 \usepackage{enumitem}
+\usepackage{ragged2e}
 
 % Special symbols
 \usepackage{textcomp}

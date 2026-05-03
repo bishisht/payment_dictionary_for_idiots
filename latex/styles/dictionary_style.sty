@@ -1,13 +1,20 @@
 % dictionary_style.sty - Custom Commands for Dictionary Entries
 \ProvidesPackage{dictionary_style}
 
+% Entry typography: headword and definition use distinct fonts.
+\newcommand{\dictheadfont}{\rmfamily\bfseries}
+\newcommand{\dictmetafont}{\rmfamily\itshape}
+\newcommand{\dictdeffont}{\ttfamily\scriptsize}
+
 % Main entry command
 % #1 = term name
 % #2 = pronunciation and part of speech
 % #3 = definition text
 \newcommand{\dictentry}[3]{%
-  \noindent\textbf{#1} \textit{#2}\\
-  #3\par\vspace{0.5em}
+  \par\noindent
+  {\dictheadfont #1}\par
+  {\dictmetafont #2}\par
+  {\dictdeffont\sloppy\justifying\emergencystretch=6em #3\par}\vspace{0.45em}
 }
 
 % Sub-definition for multiple meanings

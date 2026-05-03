@@ -6,12 +6,13 @@
 
 % Document metadata
 \title{Payment Dictionary for Idiots}
-\author{A Learning Resource for Payment Industry Terminology}
+\author{Bishisht Bhatta}
 \date{\today}
 
 \begin{document}
 
 % Front matter
+\onecolumn
 \frontmatter
 \input{frontmatter/titlepage}
 \tableofcontents
@@ -19,6 +20,8 @@
 \input{frontmatter/howto}
 
 % Main content - dictionary entries
+\clearpage
+\twocolumn
 \mainmatter
 
 \input{entries/a_entries}
@@ -49,10 +52,13 @@
 \input{entries/z_entries}
 
 % Back matter
+\clearpage
+\onecolumn
 \backmatter
 \input{backmatter/abbreviations}
 
 % Bibliography
+\nocite{swipesum_glossary}
 \printbibliography[heading=bibintoc,title={References}]
 
 % Index
