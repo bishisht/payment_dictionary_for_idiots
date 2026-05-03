@@ -2,5 +2,28 @@
 \chapter*{H}
 \addcontentsline{toc}{chapter}{H}
 
-% Terms will be added here
+\dictentry{HSM}{/ˌeɪtʃ ɛs ˈɛm/, \textit{abbr.}}{
+Hardware Security Module. A specialized, highly secure physical device used to
+safeguard and manage cryptographic keys and perform encryption and decryption.
+HSMs are designed to be tamper-resistant; if someone tries to physically open
+one, it will immediately delete all its keys to prevent them from being stolen.
 
+\example{Banks use HSMs to store the master keys used by the DUKPT scheme. When
+you enter your PIN, the bank's HSM is the only place where the key can be
+re-derived to verify your identity.}
+
+\analogy{Biological}{Like a \textbf{Bacterial Endospore}. Just as an endospore
+is a tough, dormant, and highly resistant structure that protects a bacterium's
+vital genetic material from extreme environmental stress (heat, radiation,
+chemicals), an HSM is a "hard shell" that protects a payment system's vital
+cryptographic keys from physical or digital attacks.}
+
+\crossref{\textbf{DUKPT}, \textbf{Encryption}, \textbf{Key Management}}
+
+\etymology{Short for Hardware Security Module. These devices became standard in
+the banking industry in the late 20th century to meet stringent security
+requirements.}
+}
+\indexentry{HSM}
+
+% Additional H terms will be added here
